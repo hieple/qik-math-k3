@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="2dp" >
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView android:text="@string/rpt_dt" />
+
+        <TextView android:text="@string/rpt_tm" />
+
+        <TextView android:text="@string/rpt_etm" />
+
+        <TextView android:text="@string/rpt_ct" />
+
+        <TextView android:text="@string/rpt_wg" />
+
+        <TextView android:text="@string/rpt_avg" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView android:id="@+id/rp_date" />
+
+        <TextView android:id="@+id/rp_time" />
+
+        <TextView android:id="@+id/rp_elapse" />
+
+        <TextView android:id="@+id/rp_correct" />
+
+        <TextView android:id="@+id/rp_wrong" />
+
+        <TextView android:id="@+id/rp_percent" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/bRpDone"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_span="6"
+            android:text="@string/rpt_ok" />
+    </TableRow>
+
+</TableLayout>

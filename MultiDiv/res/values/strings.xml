@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Qik Math K-3</string>
+    <string name="work_start">START</string>
+    <string name="work_stop">STOP</string>
+    <string name="work_ok">OK</string>
+    <string name="work_clear">CLR</string>
+    <string name="cfg_num_fact">Number of Facts:</string>
+    <string name="cfg_test_time">Test Time:</string>
+    <string name="cfg_max_num">Max Number:</string>
+    <string name="play_happy">Happy</string>
+    <string name="play_sad">Sad</string>
+    <string name="num_0">0</string>
+    <string name="num_1">1</string>
+    <string name="num_2">2</string>
+    <string name="num_3">3</string>
+    <string name="num_4">4</string>
+    <string name="num_5">5</string>
+    <string name="num_6">6</string>
+    <string name="num_7">7</string>
+    <string name="num_8">8</string>
+    <string name="num_9">9</string>
+    <string name="rpt_ok">OK</string>
+    <string name="rpt_dt">Date</string>
+    <string name="rpt_tm">Time</string>
+    <string name="rpt_etm">Elapsed Time</string>
+    <string name="rpt_ct">Correct</string>
+    <string name="rpt_wg">Wrong</string>
+    <string name="rpt_avg">Average</string>
+    <dimen name="cfg_font_size">20sp</dimen>
+    <dimen name="cfg_padding">5dp</dimen>
+
+</resources>

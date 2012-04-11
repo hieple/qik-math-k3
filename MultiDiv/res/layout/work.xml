@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:padding="2dp" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:padding="0dip"
+        android:stretchColumns="1" >
+
+        <TableRow android:padding="2dip" >
+
+            <multiDiv.Math.Comp.ToggleMa
+                android:id="@+id/bOnOff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#0f0"
+                android:textOff="@string/work_start"
+                android:textOn="@string/work_stop" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <multiDiv.Math.Comp.TextViewMa
+                android:id="@+id/tCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <multiDiv.Math.Comp.TextViewMa
+                android:id="@+id/tcCorrect"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#0F0" />
+
+            <multiDiv.Math.Comp.TextViewMa
+                android:id="@+id/tcCurrent"
+                android:gravity="center"
+                android:text="" />
+
+            <multiDiv.Math.Comp.TextViewMa
+                android:id="@+id/tcWrong"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#F00" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="" />
+
+            <multiDiv.Math.Comp.TextViewMa
+                android:id="@+id/tOp1"
+                android:text="" />
+
+            <TextView android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="" />
+
+            <multiDiv.Math.Comp.TextViewMa
+                android:id="@+id/tOpType"
+                android:text="" />
+
+            <TextView android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="" />
+
+            <multiDiv.Math.Comp.TextViewMa
+                android:id="@+id/tOp2"
+                android:text="" />
+
+            <TextView android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="" />
+
+            <TextView
+                android:id="@+id/tDvd"
+                android:text="" />
+
+            <TextView android:text="" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="" />
+
+            <multiDiv.Math.Comp.TextViewMa
+                android:id="@+id/tAns"
+                android:text="" />
+
+            <TextView android:text="" />
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center"
+        android:layout_weight="1" >
+
+        <TableRow>
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b0"
+                android:layout_weight="1"
+                android:text="@string/num_0" />
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b1"
+                android:layout_weight="1"
+                android:text="@string/num_1" />
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b2"
+                android:layout_weight="1"
+                android:text="@string/num_2" />
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b3"
+                android:layout_weight="1"
+                android:text="@string/num_3" />
+        </TableRow>
+
+        <TableRow>
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b4"
+                android:layout_weight="1"
+                android:text="@string/num_4" />
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b5"
+                android:layout_weight="1"
+                android:text="@string/num_5" />
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b6"
+                android:layout_weight="1"
+                android:text="@string/num_6" />
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b7"
+                android:layout_weight="1"
+                android:text="@string/num_7" />
+        </TableRow>
+
+        <TableRow>
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/bC"
+                android:layout_weight="1"
+                android:text="@string/work_clear" />
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b8"
+                android:layout_weight="1"
+                android:text="@string/num_8" />
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/b9"
+                android:layout_weight="1"
+                android:text="@string/num_9" />
+
+            <multiDiv.Math.Comp.ButtonMa
+                android:id="@+id/bOK"
+                android:layout_weight="1"
+                android:text="@string/work_ok"
+                android:textColor="#0f0" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

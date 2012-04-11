@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mrhome"
+        android:title="Home"/>
+    <item
+        android:id="@+id/mrclear"
+        android:title="Clear"/>
+    <item
+        android:id="@+id/mrconfig"
+        android:title="Config"/>
+    <item
+        android:id="@+id/mrpractice"
+        android:title="Practice"/>
+
+</menu>

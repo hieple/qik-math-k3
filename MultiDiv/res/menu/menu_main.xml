@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/mconfig"
+        android:title="Config"/>
+    <item
+        android:id="@+id/mpractice"
+        android:title="Practice"/>
+    <item
+        android:id="@+id/mreport"
+        android:title="Report"/>
+
+</menu>
