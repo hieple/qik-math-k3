@@ -31,6 +31,7 @@ public class ToggleMa extends ToggleButton {
 
 	void CreateFont() {
 
+		// Create font size
 	}
 
 	public void setBgReversed(){
