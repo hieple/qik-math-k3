@@ -9,8 +9,11 @@
     <string name="cfg_num_fact">Number of Facts:</string>
     <string name="cfg_test_time">Test Time:</string>
     <string name="cfg_max_num">Max Number:</string>
-    <string name="play_happy">Happy</string>
-    <string name="play_sad">Sad</string>
+    <string name="cfg_config">CONFIG</string>
+    <string name="cfg_practice">PRACTICE</string>
+    <string name="cfg_report">REPORT</string>
+    <string name="cfg_clear">CLEAR</string>
+    <string name="cfg_home">HOME</string>
     <string name="num_0">0</string>
     <string name="num_1">1</string>
     <string name="num_2">2</string>
@@ -28,6 +31,7 @@
     <string name="rpt_ct">Correct</string>
     <string name="rpt_wg">Wrong</string>
     <string name="rpt_avg">Average</string>
+
     <dimen name="cfg_font_size">20sp</dimen>
     <dimen name="cfg_padding">5dp</dimen>
 

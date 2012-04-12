@@ -3,7 +3,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:gravity="center" >
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/mCfg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_menu"
+            android:padding="@dimen/cfg_padding"
+            android:text="@string/cfg_config"
+            android:textColor="#0f0" />
+
+        <Button
+            android:id="@+id/mPrc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_menu"
+            android:padding="@dimen/cfg_padding"
+            android:text="@string/cfg_practice"
+            android:textColor="#0f0" />
+
+        <Button
+            android:id="@+id/mRpt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_menu"
+            android:padding="@dimen/cfg_padding"
+            android:text="@string/cfg_report"
+            android:textColor="#0f0" />
+    </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
@@ -11,4 +46,5 @@
         android:contentDescription="@string/app_name"
         android:scaleType="fitCenter"
         android:src="@drawable/bg" />
-</LinearLayout>
+
+</LinearLayout>
