@@ -5,7 +5,6 @@ import java.util.Random;
 
 import multiDiv.Math.Comp.ToggleMa;
 import android.app.Activity;
-import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -231,8 +230,9 @@ public class MainWork extends Activity {
 	}
 
 	void ShowReport() {
+		/*
 		DialogFragment newFragment = ResultDialog.newInstance();
-		newFragment.show(getFragmentManager(), "dialog");
+		newFragment.show(getFragmentManager(), "dialog");*/
 		// Ready for new game
 		final ToggleMa s = (ToggleMa) findViewById(R.id.bOnOff);
 		s.setChecked(false);

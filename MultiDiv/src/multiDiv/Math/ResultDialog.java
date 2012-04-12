@@ -2,35 +2,27 @@ package multiDiv.Math;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import android.app.DialogFragment;
-import android.os.Bundle;
-import android.view.LayoutInflater;
+
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
-public class ResultDialog extends DialogFragment {
+public class ResultDialog {
 
 	public static ResultDialog newInstance() {
 		return new ResultDialog();
 	}
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		View v = inflater.inflate(R.layout.report, container, false);
-		Button b = (Button) v.findViewById(R.id.bRpDone);
-
-		b.setOnClickListener(new Button.OnClickListener() {
-			public void onClick(View arg0) {
-				CloseDialog();
-			}
-		});
-
-		CreateInfo(v);
-		return v;
-	}
+	/*
+	 * @Override public View onCreateView(LayoutInflater inflater, ViewGroup
+	 * container, Bundle savedInstanceState) { View v =
+	 * inflater.inflate(R.layout.report, container, false); Button b = (Button)
+	 * v.findViewById(R.id.bRpDone);
+	 * 
+	 * b.setOnClickListener(new Button.OnClickListener() { public void
+	 * onClick(View arg0) { CloseDialog(); } });
+	 * 
+	 * CreateInfo(v); return v; }
+	 */
 
 	void CreateInfo(View v) {
 		TextView d = (TextView) v.findViewById(R.id.rp_date);
@@ -84,6 +76,6 @@ public class ResultDialog extends DialogFragment {
 	}
 
 	void CloseDialog() {
-		this.dismiss();
+		// this.dismiss();
 	}
 }
