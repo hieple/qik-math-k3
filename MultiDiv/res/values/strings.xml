@@ -34,5 +34,6 @@
 
     <dimen name="cfg_font_size">20sp</dimen>
     <dimen name="cfg_padding">5dp</dimen>
+    <dimen name="cfg_padding_small">2dp</dimen>
 
 </resources>

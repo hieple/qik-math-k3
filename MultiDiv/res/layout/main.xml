@@ -19,7 +19,11 @@
             android:background="@drawable/button_menu"
             android:padding="@dimen/cfg_padding"
             android:text="@string/cfg_config"
-            android:textColor="#0f0" />
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="@dimen/cfg_padding_small"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/mPrc"
@@ -28,7 +32,11 @@
             android:background="@drawable/button_menu"
             android:padding="@dimen/cfg_padding"
             android:text="@string/cfg_practice"
-            android:textColor="#0f0" />
+            android:textColor="#fff" />
+
+        <TextView
+            android:layout_width="@dimen/cfg_padding_small"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/mRpt"
@@ -37,7 +45,7 @@
             android:background="@drawable/button_menu"
             android:padding="@dimen/cfg_padding"
             android:text="@string/cfg_report"
-            android:textColor="#0f0" />
+            android:textColor="#fff" />
     </LinearLayout>
 
     <ImageView
