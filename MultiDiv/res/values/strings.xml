@@ -31,6 +31,10 @@
     <string name="rpt_ct">Correct</string>
     <string name="rpt_wg">Wrong</string>
     <string name="rpt_avg">Average</string>
+    <string name="num_plus">+</string>
+    <string name="num_minus">-</string>
+    <string name="num_multi">×</string>
+    <string name="num_div">÷</string>
 
     <dimen name="cfg_font_size">20sp</dimen>
     <dimen name="cfg_padding">5dp</dimen>

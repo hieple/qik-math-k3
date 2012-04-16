@@ -8,9 +8,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
@@ -26,6 +23,34 @@ public class MainWork extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.work);
+
+		final Button button1 = (Button) findViewById(R.id.wRpt);
+		button1.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent ite1 = new Intent(MainWork.this, ReportView.class);
+				ite1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(ite1);
+			}
+		});
+
+		final Button button2 = (Button) findViewById(R.id.wCfg);
+		button2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent ite2 = new Intent(MainWork.this, ConfigMath.class);
+				ite2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(ite2);
+			}
+		});
+
+		final Button button3 = (Button) findViewById(R.id.wHme);
+		button3.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				Intent ite3 = new Intent(MainWork.this, MultiDivActivity.class);
+				ite3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(ite3);
+			}
+		});
+
 		ConfigGame.ReadConfig(this);
 
 		final TextView v = (TextView) findViewById(R.id.tCounter);
@@ -33,17 +58,17 @@ public class MainWork extends Activity {
 				- ConfigGame.elapseTime));
 
 		final ToggleMa s = (ToggleMa) findViewById(R.id.bOnOff);
-		s.setBgReversed();		
+		s.setBgReversed();
 		s.toggle();
 		s.setChecked(false);
-		
+
 		s.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
 			public void onCheckedChanged(CompoundButton buttonView,
 					boolean isChecked) {
 
 				s.switchButton(isChecked);
-				
+
 				if (isChecked) {
 
 					ClearOnStartUp();
@@ -231,8 +256,9 @@ public class MainWork extends Activity {
 
 	void ShowReport() {
 		/*
-		DialogFragment newFragment = ResultDialog.newInstance();
-		newFragment.show(getFragmentManager(), "dialog");*/
+		 * DialogFragment newFragment = ResultDialog.newInstance();
+		 * newFragment.show(getFragmentManager(), "dialog");
+		 */
 		// Ready for new game
 		final ToggleMa s = (ToggleMa) findViewById(R.id.bOnOff);
 		s.setChecked(false);
@@ -260,16 +286,16 @@ public class MainWork extends Activity {
 			String OpSig = "";
 			switch (Mt.op) {
 			case ADD:
-				OpSig = padRight("+", 10);
+				OpSig = padRight(getString(R.string.num_plus), 10);
 				break;
 			case SUB:
-				OpSig = padRight("-", 10);
+				OpSig = padRight(getString(R.string.num_minus), 10);
 				break;
 			case MUL:
-				OpSig = padRight("x", 10);
+				OpSig = padRight(getString(R.string.num_multi), 10);
 				break;
 			case DIV:
-				OpSig = padRight("÷", 10);
+				OpSig = padRight(getString(R.string.num_div), 10);
 				break;
 			}
 			final TextView op = (TextView) findViewById(R.id.tOpType);
@@ -364,36 +390,6 @@ public class MainWork extends Activity {
 
 	enum OpType {
 		ADD, SUB, MUL, DIV
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.menu_work, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.mwhome:
-			Intent ite1 = new Intent(MainWork.this, MultiDivActivity.class);
-			ite1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(ite1);
-			return true;
-		case R.id.mwconfig:
-			Intent ite4 = new Intent(MainWork.this, ConfigMath.class);
-			ite4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(ite4);
-			return true;
-		case R.id.mwreport:
-			Intent ite3 = new Intent(MainWork.this, ReportView.class);
-			ite3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(ite3);
-			return true;
-		default:
-			return true;
-		}
 	}
 
 }

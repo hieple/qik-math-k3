@@ -35,8 +35,8 @@
                 android:layout_weight="0.35"
                 android:background="@drawable/rec_lines"
                 android:textColor="#808080"
-                android:textOff="+"
-                android:textOn="+"
+                android:textOff="@string/num_plus"
+                android:textOn="@string/num_plus"
                 android:textSize="@dimen/cfg_font_size" />
 
             <TextView
@@ -51,8 +51,8 @@
                 android:layout_weight="0.35"
                 android:background="@drawable/rec_lines"
                 android:textColor="#808080"
-                android:textOff="-"
-                android:textOn="-"
+                android:textOff="@string/num_minus"
+                android:textOn="@string/num_minus"
                 android:textSize="@dimen/cfg_font_size" />
 
             <TextView
@@ -81,8 +81,8 @@
                 android:layout_weight="0.35"
                 android:background="@drawable/rec_lines"
                 android:textColor="#808080"
-                android:textOff="×"
-                android:textOn="×"
+                android:textOff="@string/num_multi"
+                android:textOn="@string/num_multi"
                 android:textSize="@dimen/cfg_font_size" />
 
             <TextView
@@ -97,8 +97,8 @@
                 android:layout_weight="0.35"
                 android:background="@drawable/rec_lines"
                 android:textColor="#808080"
-                android:textOff="÷"
-                android:textOn="÷"
+                android:textOff="@string/num_div"
+                android:textOn="@string/num_div"
                 android:textSize="@dimen/cfg_font_size" />
 
             <TextView
