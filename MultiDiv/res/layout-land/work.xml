@@ -124,61 +124,60 @@
 
                 <TextView android:text="" />
 
-                <multiDiv.Math.Comp.TextViewOp
-                    android:id="@+id/tOp1"
-                    android:gravity="right"
-                    android:padding="0dp"
-                    android:text="" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
 
-                <TextView android:text="" />
-            </TableRow>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
 
-            <TableRow>
+                        <multiDiv.Math.Comp.TextViewOp
+                            android:id="@+id/tOpType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="right"
+                            android:padding="0dp"
+                            android:text="" />
 
-                <TextView android:text="" />
+                        <multiDiv.Math.Comp.TextViewOp
+                            android:id="@+id/tOp1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/tOpType"
+                            android:gravity="right"
+                            android:paddingRight="5dp"
+                            android:text="" />
 
-                <multiDiv.Math.Comp.TextViewOp
-                    android:id="@+id/tOpType"
-                    android:gravity="right"
-                    android:padding="0dp"
-                    android:text="" />
+                        <multiDiv.Math.Comp.TextViewOp
+                            android:id="@+id/tOp2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/tOp1"
+                            android:layout_below="@+id/tOp1"
+                            android:gravity="right"
+                            android:paddingRight="5dp"
+                            android:text="" />
+                    </RelativeLayout>
 
-                <TextView android:text="" />
-            </TableRow>
+                    <TextView
+                        android:id="@id/tDvd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/under_line"
+                        android:text=""
+                        android:visibility="invisible" />
 
-            <TableRow>
-
-                <TextView android:text="" />
-
-                <multiDiv.Math.Comp.TextViewOp
-                    android:id="@+id/tOp2"
-                    android:gravity="right"
-                    android:padding="0dp"
-                    android:text="" />
-
-                <TextView android:text="" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView android:text="" />
-
-                <TextView
-                    android:id="@+id/tDvd"
-                    android:gravity="right"
-                    android:text="" />
-
-                <TextView android:text="" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView android:text="" />
-
-                <multiDiv.Math.Comp.TextViewOp
-                    android:id="@+id/tAns"
-                    android:gravity="right"
-                    android:text="" />
+                    <multiDiv.Math.Comp.TextViewOp
+                        android:id="@+id/tAns"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingRight="5dp"
+                        android:text="" />
+                </LinearLayout>
 
                 <TextView android:text="" />
             </TableRow>

@@ -300,8 +300,10 @@ public class MainWork extends Activity {
 			}
 			final TextView op = (TextView) findViewById(R.id.tOpType);
 			op.setText(OpSig);
+
 			final TextView dvd = (TextView) findViewById(R.id.tDvd);
-			dvd.setText("____________");
+			dvd.setVisibility(0);
+
 			final TextView ans = (TextView) findViewById(R.id.tAns);
 			ans.setText("");
 

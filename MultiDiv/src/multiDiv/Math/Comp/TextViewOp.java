@@ -27,6 +27,6 @@ public class TextViewOp extends TextView {
 				.getDisplayMetrics();
 		int _height = metrics.heightPixels < metrics.widthPixels ? metrics.heightPixels
 				: metrics.widthPixels;
-		this.setTextSize(1, _height / 12);
+		this.setTextSize(2, _height / 10);
 	}
 }
