@@ -1,14 +1,20 @@
 package multiDiv.Math;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Random;
 
 import multiDiv.Math.Comp.ToggleMa;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.TextView;
@@ -255,14 +261,85 @@ public class MainWork extends Activity {
 	}
 
 	void ShowReport() {
-		/*
-		 * DialogFragment newFragment = ResultDialog.newInstance();
-		 * newFragment.show(getFragmentManager(), "dialog");
-		 */
+
+		final AlertDialog alertDialog;
+
+		LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		View layout = inflater.inflate(R.layout.report,
+				(ViewGroup) findViewById(R.id.report_dialog));
+
+		CreateResultInfo(layout);
+
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setView(layout);
+
+		alertDialog = builder.create();
+		alertDialog.show();
+
+		Button b = (Button) layout.findViewById(R.id.bRpDone);
+
+		b.setOnClickListener(new Button.OnClickListener() {
+			public void onClick(View arg0) {
+				if (alertDialog != null)
+					alertDialog.dismiss();
+			}
+		});
+
 		// Ready for new game
 		final ToggleMa s = (ToggleMa) findViewById(R.id.bOnOff);
 		s.setChecked(false);
 		Cdt.cancel(); // quit
+	}
+
+	void CreateResultInfo(View v) {
+		TextView d = (TextView) v.findViewById(R.id.rp_date);
+		Calendar rN = Calendar.getInstance();
+		SimpleDateFormat Sfm = new SimpleDateFormat("MM-dd-yyyy");
+		String Dt = Sfm.format(rN.getTime());
+		d.setText(Dt);
+
+		TextView t = (TextView) v.findViewById(R.id.rp_time);
+		Sfm = new SimpleDateFormat("hh:mm:ss");
+		String Tm = Sfm.format(rN.getTime());
+		t.setText(Tm);
+
+		TextView e = (TextView) v.findViewById(R.id.rp_elapse);
+		String Es = ConfigGame.HourMinuteSecond(ConfigGame.elapseTime);
+		e.setText(Es);
+
+		TextView c = (TextView) v.findViewById(R.id.rp_correct);
+		c.setText(String.format("%d", ConfigGame.goodResult));
+
+		TextView w = (TextView) v.findViewById(R.id.rp_wrong);
+		w.setText(String.format("%d", ConfigGame.badResult));
+
+		TextView p = (TextView) v.findViewById(R.id.rp_percent);
+		p.setText(String.format("%.2f", ConfigGame.elapseTime
+				/ (float) ConfigGame.goodResult));
+
+		String Ops = "";
+		if (ConfigGame.addGame)
+			Ops += getString(R.string.num_plus);
+		else
+			Ops += " ";
+		if (ConfigGame.subGame)
+			Ops += getString(R.string.num_minus);
+		else
+			Ops += " ";
+		if (ConfigGame.mulGame)
+			Ops += getString(R.string.num_multi);
+		else
+			Ops += " ";
+		if (ConfigGame.divGame)
+			Ops += getString(R.string.num_div);
+		else
+			Ops += " ";
+
+		String Rs = String.format("%s|%s|%s|%d|%d|%.2f|%s\n", Dt, Tm, Es,
+				ConfigGame.goodResult, ConfigGame.badResult,
+				ConfigGame.elapseTime / (float) ConfigGame.goodResult, Ops);
+
+		ConfigGame.SaveResult(v.getContext(), Rs);
 	}
 
 	public String padRight(String s, int n) {
@@ -286,16 +363,16 @@ public class MainWork extends Activity {
 			String OpSig = "";
 			switch (Mt.op) {
 			case ADD:
-				OpSig = padRight(getString(R.string.num_plus), 10);
+				OpSig = getString(R.string.num_plus);
 				break;
 			case SUB:
-				OpSig = padRight(getString(R.string.num_minus), 10);
+				OpSig = getString(R.string.num_minus);
 				break;
 			case MUL:
-				OpSig = padRight(getString(R.string.num_multi), 10);
+				OpSig = getString(R.string.num_multi);
 				break;
 			case DIV:
-				OpSig = padRight(getString(R.string.num_div), 10);
+				OpSig = getString(R.string.num_div);
 				break;
 			}
 			final TextView op = (TextView) findViewById(R.id.tOpType);

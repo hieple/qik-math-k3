@@ -2,51 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal"
-    android:gravity="center"
     android:orientation="vertical" >
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:orientation="horizontal" >
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/mCfg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
             android:background="@drawable/button_menu"
             android:padding="@dimen/cfg_padding"
             android:text="@string/cfg_config"
             android:textColor="#fff" />
 
         <TextView
+            android:id="@+id/wp1"
             android:layout_width="@dimen/cfg_padding_small"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mCfg" />
 
         <Button
             android:id="@+id/mPrc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/wp1"
             android:background="@drawable/button_menu"
             android:padding="@dimen/cfg_padding"
             android:text="@string/cfg_practice"
             android:textColor="#fff" />
 
         <TextView
+            android:id="@+id/wp2"
             android:layout_width="@dimen/cfg_padding_small"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/mPrc" />
 
         <Button
             android:id="@+id/mRpt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/wp2"
             android:background="@drawable/button_menu"
             android:padding="@dimen/cfg_padding"
             android:text="@string/cfg_report"
             android:textColor="#fff" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <ImageView
         android:layout_width="match_parent"

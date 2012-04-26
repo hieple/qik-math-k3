@@ -5,9 +5,6 @@ import multiDiv.Math.Comp.ToggleMa;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -18,6 +15,37 @@ public class ConfigMath extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.config);
+
+		final Button button1 = (Button) findViewById(R.id.cHme);
+		button1.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				SaveConfig();
+				Intent ite1 = new Intent(ConfigMath.this,
+						MultiDivActivity.class);
+				ite1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(ite1);
+			}
+		});
+
+		final Button button2 = (Button) findViewById(R.id.cPtc);
+		button2.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				SaveConfig();
+				Intent ite3 = new Intent(ConfigMath.this, MainWork.class);
+				ite3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(ite3);
+			}
+		});
+
+		final Button button3 = (Button) findViewById(R.id.cRpt);
+		button3.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				SaveConfig();
+				Intent ite4 = new Intent(ConfigMath.this, ReportView.class);
+				ite4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				startActivity(ite4);
+			}
+		});
 
 		final SeekBar Sb = (SeekBar) findViewById(R.id.tNumTest);
 		Sb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -116,6 +144,10 @@ public class ConfigMath extends Activity {
 		SetScreenInfo();
 	}
 
+	void SaveConfig() {
+		ConfigGame.SaveConfig(this);
+	}
+
 	void SetScreenInfo() {
 		final ToggleMa oA = (ToggleMa) findViewById(R.id.tAdd);
 		oA.setChecked(ConfigGame.addGame);
@@ -146,34 +178,4 @@ public class ConfigMath extends Activity {
 		t3.setText(String.format("%d", ConfigGame.maxNumber));
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		MenuInflater inflater = getMenuInflater();
-		inflater.inflate(R.menu.menu_config, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		ConfigGame.SaveConfig(this);
-		switch (item.getItemId()) {
-		case R.id.mchome:
-			Intent ite1 = new Intent(ConfigMath.this, MultiDivActivity.class);
-			ite1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(ite1);
-			return true;
-		case R.id.mcreport:
-			Intent ite4 = new Intent(ConfigMath.this, ReportView.class);
-			ite4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(ite4);
-			return true;
-		case R.id.mcpractice:
-			Intent ite3 = new Intent(ConfigMath.this, MainWork.class);
-			ite3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(ite3);
-			return true;
-		default:
-			return true;
-		}
-	}
 }
