@@ -30,9 +30,15 @@ public class MainWork extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.work);
 
+		final ToggleMa s = (ToggleMa) findViewById(R.id.bOnOff);
+		s.setBgReversed();
+		s.toggle();
+		s.setChecked(false);
+
 		final Button button1 = (Button) findViewById(R.id.wRpt);
 		button1.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
+				PauseTest();
 				Intent ite1 = new Intent(MainWork.this, ReportView.class);
 				ite1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(ite1);
@@ -42,6 +48,7 @@ public class MainWork extends Activity {
 		final Button button2 = (Button) findViewById(R.id.wCfg);
 		button2.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
+				PauseTest();
 				Intent ite2 = new Intent(MainWork.this, ConfigMath.class);
 				ite2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(ite2);
@@ -51,6 +58,7 @@ public class MainWork extends Activity {
 		final Button button3 = (Button) findViewById(R.id.wHme);
 		button3.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
+				PauseTest();
 				Intent ite3 = new Intent(MainWork.this, MultiDivActivity.class);
 				ite3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 				startActivity(ite3);
@@ -62,11 +70,6 @@ public class MainWork extends Activity {
 		final TextView v = (TextView) findViewById(R.id.tCounter);
 		v.setText(ConfigGame.HourMinuteSecond(ConfigGame.durationOfTest
 				- ConfigGame.elapseTime));
-
-		final ToggleMa s = (ToggleMa) findViewById(R.id.bOnOff);
-		s.setBgReversed();
-		s.toggle();
-		s.setChecked(false);
 
 		s.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 
@@ -109,7 +112,8 @@ public class MainWork extends Activity {
 
 				} else {
 					ConfigGame.gameStart = false;
-					Cdt.cancel(); // quit
+					if (Cdt != null)
+						Cdt.cancel(); // quit
 				}
 			}
 
@@ -220,6 +224,12 @@ public class MainWork extends Activity {
 			}
 		});
 
+	}
+
+	void PauseTest() {
+		final ToggleMa s = (ToggleMa) findViewById(R.id.bOnOff);
+		if (s.isChecked())
+			s.setChecked(false);
 	}
 
 	void ClearOnStartUp() {
@@ -340,10 +350,6 @@ public class MainWork extends Activity {
 				ConfigGame.elapseTime / (float) ConfigGame.goodResult, Ops);
 
 		ConfigGame.SaveResult(v.getContext(), Rs);
-	}
-
-	public String padRight(String s, int n) {
-		return String.format("%1$-" + n + "s", s);
 	}
 
 	void FillTest() {
