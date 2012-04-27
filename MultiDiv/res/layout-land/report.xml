@@ -20,6 +20,21 @@
             android:padding="@dimen/cfg_padding_small"
             android:text="@string/rpt_etm"
             android:textStyle="bold" />
+
+        <TextView
+            android:padding="@dimen/cfg_padding_small"
+            android:text="@string/rpt_ct"
+            android:textStyle="bold" />
+
+        <TextView
+            android:padding="@dimen/cfg_padding_small"
+            android:text="@string/rpt_wg"
+            android:textStyle="bold" />
+
+        <TextView
+            android:padding="@dimen/cfg_padding_small"
+            android:text="@string/rpt_avg"
+            android:textStyle="bold" />
     </TableRow>
 
     <TableRow android:gravity="center" >
@@ -35,30 +50,6 @@
         <TextView
             android:id="@+id/rp_elapse"
             android:padding="@dimen/cfg_padding_small" />
-    </TableRow>
-
-    <TableRow android:gravity="center" >
-
-        <TextView
-            android:gravity="center"
-            android:padding="@dimen/cfg_padding_small"
-            android:text="@string/rpt_ct"
-            android:textStyle="bold" />
-
-        <TextView
-            android:gravity="center"
-            android:padding="@dimen/cfg_padding_small"
-            android:text="@string/rpt_wg"
-            android:textStyle="bold" />
-
-        <TextView
-            android:gravity="center"
-            android:padding="@dimen/cfg_padding_small"
-            android:text="@string/rpt_avg"
-            android:textStyle="bold" />
-    </TableRow>
-
-    <TableRow android:gravity="center" >
 
         <TextView
             android:id="@+id/rp_correct"

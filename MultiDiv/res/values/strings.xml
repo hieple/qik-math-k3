@@ -37,6 +37,7 @@
     <string name="num_div">÷</string>
 
     <dimen name="cfg_font_size">20sp</dimen>
+    <dimen name="cfg_font_size_ver">18sp</dimen>
     <dimen name="cfg_padding">5dp</dimen>
     <dimen name="cfg_padding_small">2dp</dimen>
 
