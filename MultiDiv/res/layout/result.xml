@@ -1,14 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:padding="2dp" >
 
-    <TableLayout
-        android:id="@+id/tInfo"
+    <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/rHme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_menu"
+            android:padding="@dimen/cfg_padding"
+            android:text="@string/cfg_home"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/wp1a"
+            android:layout_width="@dimen/cfg_padding_small"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rHme" />
+
+        <Button
+            android:id="@+id/rCfg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/wp1a"
+            android:background="@drawable/button_menu"
+            android:padding="@dimen/cfg_padding"
+            android:text="@string/cfg_config"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/wp1"
+            android:layout_width="@dimen/cfg_padding_small"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rCfg" />
+
+        <Button
+            android:id="@+id/rPrc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/wp1"
+            android:background="@drawable/button_menu"
+            android:padding="@dimen/cfg_padding"
+            android:text="@string/cfg_practice"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/wp2"
+            android:layout_width="@dimen/cfg_padding_small"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/rPrc" />
+
+        <Button
+            android:id="@+id/rClr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/wp2"
+            android:background="@drawable/button_menu"
+            android:padding="@dimen/cfg_padding"
+            android:text="@string/cfg_clear"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gDetail"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="2dip" >
-    </TableLayout>
+        android:numColumns="1" >
+    </GridView>
+
+    <ListView
+        android:id="@+id/vDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    </ListView>
 
 </LinearLayout>
