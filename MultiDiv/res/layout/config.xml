@@ -101,18 +101,9 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.4" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.4" />
+                    android:layout_height="@dimen/cfg_padding"
+                    android:layout_span="3"
+                    android:layout_weight="1" />
             </TableRow>
 
             <TableRow>

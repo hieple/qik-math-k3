@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="2dp" >
@@ -69,12 +69,79 @@
             android:padding="@dimen/cfg_padding"
             android:text="@string/cfg_clear"
             android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/rMov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_menu"
+            android:padding="@dimen/cfg_padding"
+            android:text="@string/cfg_go_right"
+            android:textColor="#fff" />
     </RelativeLayout>
 
-    <ListView
-        android:id="@+id/vDetail"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="0dip" >
+
+        <TextView
+            android:id="@+id/rdDtLb"
+            android:layout_width="@dimen/rpt_w_dt"
+            android:layout_height="wrap_content"
+            android:text="@string/rpt_dt" />
+
+        <TextView
+            android:id="@+id/rdTmLb"
+            android:layout_width="@dimen/rpt_w_tm"
+            android:layout_height="wrap_content"
+            android:text="@string/rpt_tm" />
+
+        <TextView
+            android:id="@+id/rdEtmLb"
+            android:layout_width="@dimen/rpt_w_etm"
+            android:layout_height="wrap_content"
+            android:text="@string/rpt_etm" />
+
+        <TextView
+            android:id="@+id/rdCorrectLb"
+            android:layout_width="@dimen/rpt_w_ct"
+            android:layout_height="wrap_content"
+            android:text="@string/rpt_ct" />
+
+        <TextView
+            android:id="@+id/rdWrongLb"
+            android:layout_width="@dimen/rpt_w_wg"
+            android:layout_height="wrap_content"
+            android:text="@string/rpt_wg" />
+
+        <TextView
+            android:id="@+id/rdAverageLb"
+            android:layout_width="@dimen/rpt_w_avg"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/rpt_avg" />
+
+        <TextView
+            android:id="@+id/rdModeLb"
+            android:layout_width="@dimen/rpt_w_md"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/rpt_md" />
+    </LinearLayout>
+
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-    </ListView>
+
+        <TableLayout
+            android:id="@+id/tDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </TableLayout>
+    </ScrollView>
 
 </LinearLayout>

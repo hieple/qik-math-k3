@@ -6,14 +6,6 @@
     <string name="work_stop">STOP</string>
     <string name="work_ok">OK</string>
     <string name="work_clear">CLR</string>
-    <string name="cfg_num_fact">Number of Facts:</string>
-    <string name="cfg_test_time">Test Time:</string>
-    <string name="cfg_max_num">Max Number:</string>
-    <string name="cfg_config">CONFIG</string>
-    <string name="cfg_practice">PRACTICE</string>
-    <string name="cfg_report">REPORT</string>
-    <string name="cfg_clear">CLEAR</string>
-    <string name="cfg_home">HOME</string>
     <string name="num_0">0</string>
     <string name="num_1">1</string>
     <string name="num_2">2</string>
@@ -24,6 +16,10 @@
     <string name="num_7">7</string>
     <string name="num_8">8</string>
     <string name="num_9">9</string>
+    <string name="num_plus">+</string>
+    <string name="num_minus">-</string>
+    <string name="num_multi">×</string>
+    <string name="num_div">÷</string>
     <string name="rpt_ok">OK</string>
     <string name="rpt_dt">Date</string>
     <string name="rpt_tm">Time</string>
@@ -32,15 +28,29 @@
     <string name="rpt_wg">Wrong</string>
     <string name="rpt_avg">Average</string>
     <string name="rpt_md">Mode</string>
-    <string name="num_plus">+</string>
-    <string name="num_minus">-</string>
-    <string name="num_multi">×</string>
-    <string name="num_div">÷</string>
+    <string name="rpt_nf">Data not found.</string>
+    <string name="cfg_num_fact">Number of Facts:</string>
+    <string name="cfg_test_time">Test Time:</string>
+    <string name="cfg_max_num">Max Number:</string>
+    <string name="cfg_config">CONFIG</string>
+    <string name="cfg_practice">PRACTICE</string>
+    <string name="cfg_report">REPORT</string>
+    <string name="cfg_clear">CLEAR</string>
+    <string name="cfg_home">HOME</string>
+    <string name="cfg_go_right">>></string>
+    <string name="cfg_go_left">&lt;&lt;</string>
 
     <dimen name="cfg_font_size">20sp</dimen>
     <dimen name="cfg_font_size_ver">18sp</dimen>
     <dimen name="cfg_font_size_rpt">12sp</dimen>
     <dimen name="cfg_padding">5dp</dimen>
     <dimen name="cfg_padding_small">2dp</dimen>
+    <dimen name="rpt_w_dt">80dp</dimen>
+    <dimen name="rpt_w_tm">70dp</dimen>
+    <dimen name="rpt_w_etm">90dp</dimen>
+    <dimen name="rpt_w_ct">55dp</dimen>
+    <dimen name="rpt_w_wg">55dp</dimen>
+    <dimen name="rpt_w_avg">60dp</dimen>
+    <dimen name="rpt_w_md">60dp</dimen>
 
 </resources>

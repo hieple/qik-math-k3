@@ -36,7 +36,7 @@ public class ButtonMa extends Button {
 				.getDisplayMetrics();
 		int _height = metrics.heightPixels < metrics.widthPixels ? metrics.heightPixels
 				: metrics.widthPixels;
-		return _height / 6;
+		return _height / 8;
 	}
 
 	int measureWidth(int measureSpec) {

@@ -165,9 +165,8 @@
                     <TextView
                         android:id="@+id/tDvd"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/cfg_padding"
                         android:background="@drawable/under_line"
-                        android:text=""
                         android:visibility="invisible" />
 
                     <multiDiv.Math.Comp.TextViewOp
@@ -194,17 +193,20 @@
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b0"
                     android:layout_weight="1"
-                    android:text="@string/num_0" />
+                    android:text="@string/num_0"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b1"
                     android:layout_weight="1"
-                    android:text="@string/num_1" />
+                    android:text="@string/num_1"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b2"
                     android:layout_weight="1"
-                    android:text="@string/num_2" />
+                    android:text="@string/num_2"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow>
@@ -212,17 +214,20 @@
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b3"
                     android:layout_weight="1"
-                    android:text="@string/num_3" />
+                    android:text="@string/num_3"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b4"
                     android:layout_weight="1"
-                    android:text="@string/num_4" />
+                    android:text="@string/num_4"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b5"
                     android:layout_weight="1"
-                    android:text="@string/num_5" />
+                    android:text="@string/num_5"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow>
@@ -230,17 +235,20 @@
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b6"
                     android:layout_weight="1"
-                    android:text="@string/num_6" />
+                    android:text="@string/num_6"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b7"
                     android:layout_weight="1"
-                    android:text="@string/num_7" />
+                    android:text="@string/num_7"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b8"
                     android:layout_weight="1"
-                    android:text="@string/num_8" />
+                    android:text="@string/num_8"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
             </TableRow>
 
             <TableRow>
@@ -248,17 +256,20 @@
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/bC"
                     android:layout_weight="1"
-                    android:text="@string/work_clear" />
+                    android:text="@string/work_clear"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b9"
                     android:layout_weight="1"
-                    android:text="@string/num_9" />
+                    android:text="@string/num_9"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
 
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/bOK"
                     android:layout_weight="1"
                     android:text="@string/work_ok"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
                     android:textColor="#0f0" />
             </TableRow>
         </TableLayout>

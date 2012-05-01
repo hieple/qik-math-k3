@@ -74,9 +74,7 @@ public class ConfigGame {
 		String[] Fn = Cnt.fileList();
 		Arrays.sort(Fn);
 		int index = Arrays.binarySearch(Fn, fnResult);
-		if (index < 0)
-			Rs.add("Data not found!");
-		else
+		if (index > 0)
 			try {
 				FileInputStream fos = Cnt.openFileInput(fnResult);
 				DataInputStream din = new DataInputStream(fos);
@@ -84,7 +82,7 @@ public class ConfigGame {
 						din));
 				String Ln;
 				while ((Ln = bre.readLine()) != null) {
-					Rs.add(Ln);
+					Rs.add(0, Ln); // reversed order
 				}
 
 				bre.close();
@@ -95,7 +93,6 @@ public class ConfigGame {
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
-
 		return Rs;
 	}
 
