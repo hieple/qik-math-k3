@@ -32,13 +32,15 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/rdDate"
         android:layout_toRightOf="@+id/rdETimeLb"
+        android:paddingRight="@dimen/cfg_padding"
         android:textSize="@dimen/cfg_font_size_rpt" />
 
     <TextView
         android:id="@+id/rdModeLb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/rdDate"
+        android:layout_alignBaseline="@+id/rdDate"
+        android:layout_toRightOf="@+id/rdETime"
         android:paddingRight="@dimen/cfg_padding"
         android:text="@string/rpt_md"
         android:textSize="@dimen/cfg_font_size_rpt" />

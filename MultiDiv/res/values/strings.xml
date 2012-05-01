@@ -31,6 +31,7 @@
     <string name="rpt_ct">Correct</string>
     <string name="rpt_wg">Wrong</string>
     <string name="rpt_avg">Average</string>
+    <string name="rpt_md">Mode</string>
     <string name="num_plus">+</string>
     <string name="num_minus">-</string>
     <string name="num_multi">×</string>
@@ -38,6 +39,7 @@
 
     <dimen name="cfg_font_size">20sp</dimen>
     <dimen name="cfg_font_size_ver">18sp</dimen>
+    <dimen name="cfg_font_size_rpt">12sp</dimen>
     <dimen name="cfg_padding">5dp</dimen>
     <dimen name="cfg_padding_small">2dp</dimen>
 

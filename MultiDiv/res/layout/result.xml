@@ -71,13 +71,6 @@
             android:textColor="#fff" />
     </RelativeLayout>
 
-    <GridView
-        android:id="@+id/gDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numColumns="1" >
-    </GridView>
-
     <ListView
         android:id="@+id/vDetail"
         android:layout_width="wrap_content"
