@@ -42,7 +42,6 @@
 
     <dimen name="cfg_font_size">20sp</dimen>
     <dimen name="cfg_font_size_ver">18sp</dimen>
-    <dimen name="cfg_font_size_rpt">12sp</dimen>
     <dimen name="cfg_padding">5dp</dimen>
     <dimen name="cfg_padding_small">2dp</dimen>
     <dimen name="rpt_w_dt">80dp</dimen>
@@ -52,6 +51,6 @@
     <dimen name="rpt_w_wg">55dp</dimen>
     <dimen name="rpt_w_avg">60dp</dimen>
     <dimen name="rpt_w_md">60dp</dimen>
-    <color name="color_green">#FF265024</color>
+    <color name="color_green">#F090</color>
 
 </resources>

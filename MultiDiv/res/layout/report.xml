@@ -83,7 +83,7 @@
             android:id="@+id/bRpDone"
             android:layout_gravity="center"
             android:layout_span="6"
-            android:background="@drawable/rec_lines"
+            android:background="@drawable/rec_lines_1"
             android:padding="@dimen/cfg_padding"
             android:text="@string/rpt_ok"
             android:textColor="#fff" />

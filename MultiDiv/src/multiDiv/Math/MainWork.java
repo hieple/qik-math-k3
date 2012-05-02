@@ -85,6 +85,7 @@ public class MainWork extends Activity {
 					Cdt = new CountDownTimer(
 							(ConfigGame.durationOfTest + 1) * 1000, 1000) {
 
+						@Override
 						public void onTick(long millisUntilFinished) {
 							if (ConfigGame.gameStart) {
 								ConfigGame.elapseTime = ConfigGame.durationOfTest
@@ -97,6 +98,7 @@ public class MainWork extends Activity {
 							}
 						}
 
+						@Override
 						public void onFinish() {
 
 							if (ConfigGame.gameStart) {
