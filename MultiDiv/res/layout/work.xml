@@ -62,7 +62,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/rec_lines"
-            android:textColor="#0f0"
+            android:textColor="@color/color_green"
             android:textOff="@string/work_start"
             android:textOn="@string/work_stop" />
 
@@ -257,7 +257,8 @@
                     android:id="@+id/bC"
                     android:layout_weight="1"
                     android:text="@string/work_clear"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/color_green" />
 
                 <multiDiv.Math.Comp.ButtonMa
                     android:id="@+id/b9"
@@ -270,7 +271,7 @@
                     android:layout_weight="1"
                     android:text="@string/work_ok"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="#0f0" />
+                    android:textColor="@color/color_green" />
             </TableRow>
         </TableLayout>
     </LinearLayout>

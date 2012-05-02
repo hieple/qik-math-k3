@@ -52,5 +52,6 @@
     <dimen name="rpt_w_wg">55dp</dimen>
     <dimen name="rpt_w_avg">60dp</dimen>
     <dimen name="rpt_w_md">60dp</dimen>
+    <color name="color_green">#FF265024</color>
 
 </resources>
